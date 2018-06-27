@@ -41,3 +41,18 @@ div.markdown {
 footer::before {
 	content: counter(tweets) " tweets • "
 }
+
+[title="Home"] {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	font-size: 32px;
+}
+
+	[title="Home"]:hover {
+		text-shadow: 0 0 1em white;
+	}
+
+	[title="Home"]:not(:hover) {
+		filter: grayscale();
+	}
