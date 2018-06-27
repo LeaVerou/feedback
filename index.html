@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="index">
 <head>
 
 <meta charset="UTF-8">
@@ -7,46 +7,31 @@
 <title>Twitter Feedback</title>
 <link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-<main mv-app="feedback" xmv-storage="https://github.com/leaverou/leaverou.github.io/feedback/[url('talk')].md" mv-plugins="markdown xtwitter">
-	<div property="feedback" class="markdown">
-![](https://pbs.twimg.com/media/DgoEJW0UEAEbFVY?format=jpg&name=medium)
-# Even More CSS Secrets
-## SmashingConf Toronto 2018
+<header>
+	<img src="http://lea.verou.me/mark.svg" alt="">
+	<h1>Lea’s Twitter Stories</h1>
+</header>
 
-https://twitter.com/smashingconf/status/1011620095808991232
-https://twitter.com/Regina_McD/status/1011624252364279808
-https://twitter.com/SaraSoueidan/status/1011625186221703168
-https://twitter.com/svinkle/status/1011625659242897409
-https://twitter.com/svinkle/status/1011628671210278912
-https://twitter.com/SusCasasola/status/1011628934507716608
-https://twitter.com/svillegastweets/status/1011629402441113601
-https://twitter.com/Graham42x/status/1011630053740904454
-https://twitter.com/HenriHelvetica/status/1011630698984361985
-https://twitter.com/HenriHelvetica/status/1011634483760488454
-https://twitter.com/svinkle/status/1011632394212986884
-https://twitter.com/svinkle/status/1011633086738690049
-https://twitter.com/ka11away/status/1011633174152085504
-https://twitter.com/svinkle/status/1011633416180326400
-https://twitter.com/marissahalpert/status/1011635613030846464
-https://twitter.com/dratsuchcustard/status/1011637202294583296
-https://twitter.com/SandraC0des/status/1011640409779523585
-https://twitter.com/aditibarbhai/status/1011641975571873793
-https://twitter.com/pascallaliberte/status/1011647592160202752
-https://twitter.com/HenriHelvetica/status/1011647902136008704
-https://twitter.com/LinnOyenFarley/status/1011650208831287296
-https://twitter.com/jamshidhashimi/status/1011654091880194048
-	</div>
+<main mv-app="feedback" mv-plugins="markdown twitter" mv-storage="https://github.com/leaverou/feedback/feedback.json">
+	<article property="story" mv-multiple>
+		<a href="https://leaverou.github.io/feedback/[id]" target="_blank">
+			<img alt="" property="image">
+			<h1 property="title">Title</h1>
+			<h2 property="subtitle">Subtitle</h2>
+			<span class="edit-only">https://leaverou.github.io/feedback/<span property="id" mv-default="[idify(title)]-[idify(subtitle)]"></span></span>
+		</a>
+	</article>
 </main>
 
 <footer>
-	Made with ❤️ and <a href="https://mavo.io"><img src="https://mavo.io/logo.svg" alt="Mavo"></a>
+	Made with ❤️ and <a href="https://mavo.io"><img src="https://mavo.io/logo.svg" alt="Mavo"></a> &bull; Code
 </footer>
 
 <script src="https://dev.mavo.io/dist/mavo.js"></script>
-<script src="../mavo/plugins/twitter/mavo-twitter.js"></script>
 
 </body>
 </html>

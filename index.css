@@ -1,0 +1,45 @@
+header {
+	margin: 2em 0;
+	text-align: center;
+	color: #f06;
+}
+
+	header img {
+		display: block;
+		margin: auto;
+		width: 8em;
+	}
+
+	header h1 {
+		margin: .3em 0;
+		font-size: 300%;
+		letter-spacing: -.05em;
+	}
+
+[property=story] {
+	max-width: 400px;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: .2em;
+}
+
+	[property=story] > a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	[property=story] img {
+		width: 100%;
+		max-height: 12em;
+	}
+
+	[property=story] h1 {
+		font-size: 200%;
+		margin: 1rem;
+		margin-bottom: .4em;
+	}
+
+	[property=story] h2 {
+		font-size: 100%;
+		margin: 1rem;
+		margin-top: 0;
+	}

@@ -1,0 +1,43 @@
+header {
+	margin-bottom: 2em;
+}
+
+	header img {
+		width: 100vw;
+		max-height: 50vh;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin: 0 -50vw;
+	}
+
+	header h1 {
+		position: relative;
+		margin-top: -1.2em;
+		color: white;
+		text-shadow: 0 0 .5em rgba(0,0,0,.5);
+		font-size: 400%;
+	}
+
+	header h2 {
+		position: relative;
+		margin-top: -.8em;
+	}
+
+div.markdown {
+	padding: 0 1em;
+}
+
+	div.markdown > p:first-child {
+		margin-top: 0;
+	}
+
+	.mv-add-content {
+		padding: .5em;
+		margin-top: 1em;
+		font: inherit;
+	}
+
+footer::before {
+	content: counter(tweets) " tweets • "
+}

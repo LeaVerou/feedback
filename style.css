@@ -15,6 +15,14 @@ body {
 	counter-reset: tweets;
 }
 
+h1, h2 {
+	font: bold 200%/1.1 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h2 {
+	color: gray;
+}
+
 main {
 	display: flex;
 	flex-flow: column;
@@ -22,60 +30,33 @@ main {
 
 twitterwidget {
     counter-increment: tweets;
-	min-width: 100% !important;
+	min-width: none !important;
 	margin: auto;
 }
 
 .mv-bar.mv-ui {
-	position: absolute;
+	position: fixed;
 	right: .3em;
 }
 
-div.markdown {
-	margin: auto;
-	min-width: 500px;
+main {
+	width: 800px;
 	max-width: 100%;
-	padding: 0 1em;
+	margin: auto;
 }
 
-	div.markdown img:first-child {
-		width: 100vw;
-		max-height: 40vh;
-		position: relative;
-		left: 50%;
-		right: 50%;
-		margin: 0 -50vw;
-		object-fit: cover;
-	}
-
-	div.markdown > p:first-child {
-		margin-top: 0;
-	}
-
-h1, h2 {
-	font: bold 200%/1.1 'Helvetica Neue', Helvetica, sans-serif;
+.edit-only {
+	display: none;
 }
 
-h1 {
-	color: white;
-	text-shadow: 0 0 .5em rgba(0,0,0,.5);
-	font-size: 400%;
-}
-
-h2 {
-	color: gray;
-}
-
-	h1:first-of-type {
-		position: relative;
-		margin-top: -1.5em;
+	[mv-mode=edit] .edit-only {
+		display: block;
 	}
 
-	h1:first-of-type + h2 {
-		position: relative;
-		margin-top: -.8em;
-		margin-bottom: 2em;
-	}
+img[property=image] {
+	object-fit: cover;
+	background: #f06;
+}
 
 footer {
 	padding: 1em calc(50vw - 370px);
@@ -83,10 +64,6 @@ footer {
 	background: hsl(220,10%,93%);
 	font-size: 150%;
 }
-
-	footer::before {
-		content: counter(tweets) " tweets • "
-	}
 
 	footer img {
 		display: inline-block;
