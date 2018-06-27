@@ -1,11 +1,3 @@
-@font-face {
-	font-family: 'Raleway';
-	src: url('fonts/raleway_thin-webfont.eot');
-	src: local('☺'), url('fonts/raleway_thin-webfont.woff') format('woff'), url('fonts/raleway_thin-webfont.ttf') format('truetype'), url('fonts/raleway_thin-webfont.svg#webfontpeVNweuo') format('svg');
-	font-weight: 100;
-	font-style: normal;
-}
-
 html {
 
 }
@@ -13,6 +5,10 @@ html {
 body {
 	margin: 0;
 	counter-reset: tweets;
+}
+
+a {
+	color: inherit;
 }
 
 h1, h2 {
