@@ -1,0 +1,95 @@
+@font-face {
+	font-family: 'Raleway';
+	src: url('fonts/raleway_thin-webfont.eot');
+	src: local('☺'), url('fonts/raleway_thin-webfont.woff') format('woff'), url('fonts/raleway_thin-webfont.ttf') format('truetype'), url('fonts/raleway_thin-webfont.svg#webfontpeVNweuo') format('svg');
+	font-weight: 100;
+	font-style: normal;
+}
+
+html {
+
+}
+
+body {
+	margin: 0;
+	counter-reset: tweets;
+}
+
+main {
+	display: flex;
+	flex-flow: column;
+}
+
+twitterwidget {
+    counter-increment: tweets;
+	min-width: 100% !important;
+	margin: auto;
+}
+
+.mv-bar.mv-ui {
+	position: absolute;
+	right: .3em;
+}
+
+div.markdown {
+	margin: auto;
+	min-width: 500px;
+	max-width: 100%;
+	padding: 0 1em;
+}
+
+	div.markdown img:first-child {
+		width: 100vw;
+		max-height: 40vh;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin: 0 -50vw;
+		object-fit: cover;
+	}
+
+	div.markdown > p:first-child {
+		margin-top: 0;
+	}
+
+h1, h2 {
+	font: bold 200%/1.1 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h1 {
+	color: white;
+	text-shadow: 0 0 .5em rgba(0,0,0,.5);
+	font-size: 400%;
+}
+
+h2 {
+	color: gray;
+}
+
+	h1:first-of-type {
+		position: relative;
+		margin-top: -1.5em;
+	}
+
+	h1:first-of-type + h2 {
+		position: relative;
+		margin-top: -.8em;
+		margin-bottom: 2em;
+	}
+
+footer {
+	padding: 1em calc(50vw - 370px);
+	margin: 1em auto 0;
+	background: hsl(220,10%,93%);
+	font-size: 150%;
+}
+
+	footer::before {
+		content: counter(tweets) " tweets • "
+	}
+
+	footer img {
+		display: inline-block;
+		vertical-align: -.2em;
+		height: 1.2em;
+	}
