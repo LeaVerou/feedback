@@ -1,1 +1,12 @@
-
+{
+	"story": [
+		{
+			"title": "SomeTitle",
+			"subtitle": "someSubtitle",
+			"id": "sometitle-somesubtitle"
+		},
+		{
+			"id": "-"
+		}
+	]
+}
